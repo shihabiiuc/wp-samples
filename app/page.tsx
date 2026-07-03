@@ -1,65 +1,307 @@
 import Image from "next/image";
 
+type Project = {
+  name: string;
+  category: string;
+  url: string;
+  description: string;
+  icon: keyof typeof icons;
+};
+
+const projects: Project[] = [
+  {
+    name: "Roofing Contractor",
+    category: "Roofing",
+    url: "https://roofinginri.com/",
+    description:
+      "Lead-generation site for a Rhode Island roofing company, built to turn storm-damage searches into booked estimates.",
+    icon: "roof",
+  },
+  {
+    name: "Sobio Properties",
+    category: "Real Estate",
+    url: "https://sobioproperties.com/",
+    description:
+      "International real estate listings site for cross-border buyers, with clean listing pages and inquiry funnels.",
+    icon: "building",
+  },
+  {
+    name: "Your Thinking Mind",
+    category: "Wellness Blog",
+    url: "https://yourthinkingmind.com/",
+    description:
+      "Content-first wellness blog built for fast reads and easy navigation across long-form mental health articles.",
+    icon: "leaf",
+  },
+  {
+    name: "Interior Design Studio",
+    category: "Interior Design",
+    url: "https://hitechistubd.com/",
+    description:
+      "Interior design studio site with project galleries and service packages tailored for residential clients.",
+    icon: "chair",
+  },
+  {
+    name: "AJ Rich Therapy",
+    category: "Family Therapy",
+    url: "https://ajrichtherapy.com/",
+    description:
+      "Warm, approachable site for a family therapy practice, designed to make booking a first session feel easy.",
+    icon: "heart",
+  },
+  {
+    name: "Patient Flow Solutions",
+    category: "Dental Marketing",
+    url: "https://patientflowsolutions.com/",
+    description:
+      "Marketing platform for a dental-industry agency, built to turn dental-practice leads into booked demo calls.",
+    icon: "tooth",
+  },
+  {
+    name: "My Property Master",
+    category: "Property Management",
+    url: "https://mypropertymaster.com/",
+    description:
+      "Property management company site with clear service breakdowns and an owner-inquiry form built to convert.",
+    icon: "key",
+  },
+  {
+    name: "VI Media",
+    category: "Marketing Agency",
+    url: "https://vi-media.ca/",
+    description:
+      "Canadian marketing agency site with a bold portfolio layout built to show off client campaign work.",
+    icon: "megaphone",
+  },
+  {
+    name: "360 Cap Group",
+    category: "Financing",
+    url: "https://www.360capgroup.com/",
+    description:
+      "Corporate site for a capital financing group, built to read as credible and trustworthy to loan applicants.",
+    icon: "coins",
+  },
+  {
+    name: "Blue Cat Cleaning",
+    category: "Commercial Cleaning",
+    url: "https://bluecatcleaning.com/",
+    description:
+      "Local commercial cleaning company site optimized to turn nearby searches into quote requests.",
+    icon: "spray",
+  },
+  {
+    name: "Elwood Bathers",
+    category: "Seafood Restaurant",
+    url: "https://elwoodbathers.com/",
+    description:
+      "Seafood restaurant site built on a fully custom WordPress theme with hand-coded Gutenberg blocks.",
+    icon: "fish",
+  },
+];
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <main className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-20">
+      <a
+        href="https://www.fiverr.com/s/6YlEQZP"
+        className="inline-flex items-center gap-2 font-label text-xs uppercase tracking-[0.15em] text-navy transition-colors hover:text-brass"
+      >
+        <ArrowLeftIcon />
+        Go Back to My Fiverr Gig
+      </a>
+
+      <h1 className="mt-8 font-display text-4xl leading-[1.1] text-ink sm:text-5xl md:text-6xl">
+        WordPress Website Samples
+        <span className="mt-1 block font-display text-xl italic text-ink-muted sm:text-2xl">
+          (My Previous Works)
+        </span>
+      </h1>
+
+      <a
+        href="https://www.fiverr.com/s/2KY0GG8"
+        className="group mt-8 inline-flex items-center gap-4"
+      >
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="/shihab-profile-picture-fiverr.jpg"
+          alt="Shihab — WordPress developer on Fiverr"
+          width={64}
+          height={64}
           priority
+          className="h-16 w-16 rounded-full border-2 border-line object-cover transition-colors group-hover:border-navy"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+        <span className="font-label text-xs uppercase tracking-[0.15em] text-ink-muted transition-colors group-hover:text-navy">
+          Hire me on Fiverr
+          <ArrowUpRightIcon className="ml-1 inline h-3 w-3" />
+        </span>
+      </a>
+
+      <ul className="mt-14 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-9 lg:grid-cols-3 lg:gap-10">
+        {projects.map((project) => (
+          <li key={project.url}>
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative block rounded-sm border border-line bg-card p-7 pt-10 transition-all duration-200 hover:-translate-y-1 hover:border-navy hover:shadow-[0_18px_40px_-20px_rgba(27,36,48,0.35)]"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+              <span className="absolute -top-5 left-7 flex h-11 w-11 items-center justify-center rounded-full border-[1.5px] border-brass bg-card text-brass shadow-sm transition-transform duration-200 group-hover:-rotate-6">
+                <Icon name={project.icon} />
+              </span>
+
+              <p className="font-label text-[11px] uppercase tracking-[0.15em] text-navy-soft">
+                {project.category}
+              </p>
+              <h2 className="mt-2 font-display text-xl text-ink">
+                {project.name}
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-ink-muted">
+                {project.description}
+              </p>
+
+              <div className="mt-6 flex items-center justify-between border-t border-line pt-4">
+                <span className="font-label text-xs text-ink-muted">
+                  {project.url
+                    .replace(/^https?:\/\/(www\.)?/, "")
+                    .replace(/\/$/, "")}
+                </span>
+                <span className="flex items-center gap-1 font-label text-xs text-navy transition-colors group-hover:text-brass">
+                  Visit site
+                  <ArrowUpRightIcon className="h-3 w-3" />
+                </span>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <footer className="mt-20 border-t border-line pt-8 text-center">
+        <a
+          href="https://www.fiverr.com/s/6YlEQZP"
+          className="font-label text-xs uppercase tracking-[0.15em] text-ink-muted transition-colors hover:text-navy"
+        >
+          Ready for your project? Visit my Fiverr gig
+          <ArrowUpRightIcon className="ml-1 inline h-3 w-3" />
+        </a>
+      </footer>
+    </main>
   );
+}
+
+function ArrowLeftIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M19 12H5M11 18l-6-6 6-6" />
+    </svg>
+  );
+}
+
+function ArrowUpRightIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M7 17 17 7M7 7h10v10" />
+    </svg>
+  );
+}
+
+const iconProps = {
+  width: 20,
+  height: 20,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 1.6,
+  strokeLinecap: "round" as const,
+  strokeLinejoin: "round" as const,
+};
+
+const icons = {
+  roof: (
+    <svg {...iconProps}>
+      <path d="M3 11.5 12 4l9 7.5" />
+      <path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9" />
+    </svg>
+  ),
+  building: (
+    <svg {...iconProps}>
+      <rect x="6" y="3" width="12" height="18" rx="1" />
+      <path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1" />
+    </svg>
+  ),
+  leaf: (
+    <svg {...iconProps}>
+      <path d="M5 21c9 0 14-5 14-14 0-1-.1-2-.3-3C10 4 5 9 5 18c0 1 0 2 .2 3z" />
+      <path d="M5 21c3-6 6-9 12-12" />
+    </svg>
+  ),
+  chair: (
+    <svg {...iconProps}>
+      <path d="M6 11V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5" />
+      <path d="M4 11h16v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z" />
+      <path d="M6 18v2M18 18v2" />
+    </svg>
+  ),
+  heart: (
+    <svg {...iconProps}>
+      <path d="M12 20s-7-4.5-9-8.6C1.4 8 3 5 6.3 5 8.4 5 10.6 6.4 12 8.5 13.4 6.4 15.6 5 17.7 5 21 5 22.6 8 21 11.4 19 15.5 12 20 12 20z" />
+    </svg>
+  ),
+  tooth: (
+    <svg {...iconProps}>
+      <path d="M8 3c1 0 1.6.9 2 .9S10.9 3 12 3s3 .8 3.4 2.4c.5 1.9-.1 3.3-.6 5.2-.4 1.6-.4 3.3-.6 5-.2 1.5-.6 2.4-1.3 2.4-.9 0-1-1.3-1.2-2.9-.1-1-.2-2-.7-2-.5 0-.6 1-.7 2C10.1 17.7 10 19 9.1 19c-.7 0-1.1-.9-1.3-2.4-.2-1.7-.2-3.4-.6-5-.5-1.9-1.1-3.3-.6-5.2C7 3.8 7.4 3 8 3z" />
+    </svg>
+  ),
+  key: (
+    <svg {...iconProps}>
+      <circle cx="8" cy="15" r="4.2" />
+      <path d="M11 12.2 20 3.2M15.5 6.7l2.3 2.3M13 9.2l2 2" />
+    </svg>
+  ),
+  megaphone: (
+    <svg {...iconProps}>
+      <path d="M3 10.5v3a1 1 0 0 0 1 1h1.8L13 19V6l-7.2 4.5H4a1 1 0 0 0-1 1z" />
+      <path d="M16.5 9a4 4 0 0 1 0 6" />
+    </svg>
+  ),
+  coins: (
+    <svg {...iconProps}>
+      <ellipse cx="12" cy="6.5" rx="6" ry="2.4" />
+      <path d="M6 6.5v5c0 1.3 2.7 2.4 6 2.4s6-1.1 6-2.4v-5" />
+      <path d="M6 11.5v5c0 1.3 2.7 2.4 6 2.4s6-1.1 6-2.4v-5" />
+    </svg>
+  ),
+  spray: (
+    <svg {...iconProps}>
+      <path d="M9 3.5h3l.8 1.7H15a1 1 0 0 1 1 1V8H8V6.2a1 1 0 0 1 1-1z" />
+      <path d="M7.5 8h6.7l.9 11a1 1 0 0 1-1 1.1H7.6a1 1 0 0 1-1-1.1z" />
+      <path d="M3.5 5.5 5 6.7M3.5 9.5 5 10M3 13.5h2" />
+    </svg>
+  ),
+  fish: (
+    <svg {...iconProps}>
+      <path d="M3 12c3-4 8-6 13-4 2 .8 3.6 2.3 4.2 4-.6 1.7-2.2 3.2-4.2 4-5 2-10 0-13-4z" />
+      <path d="M20.2 12 22 9.6V14.4z" />
+      <circle cx="7.3" cy="11" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+};
+
+function Icon({ name }: { name: keyof typeof icons }) {
+  return icons[name];
 }
