@@ -18,14 +18,6 @@ const projects: Project[] = [
     icon: "roof",
   },
   {
-    name: "Sobio Properties",
-    category: "Real Estate",
-    url: "https://sobioproperties.com/",
-    description:
-      "International real estate listings site for cross-border buyers, with clean listing pages and inquiry funnels.",
-    icon: "building",
-  },
-  {
     name: "Your Thinking Mind",
     category: "Wellness Blog",
     url: "https://yourthinkingmind.com/",
@@ -102,38 +94,9 @@ const projects: Project[] = [
 export default function Home() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-20">
-      <a
-        href="https://www.fiverr.com/s/6YlEQZP"
-        className="inline-flex items-center gap-2 font-label text-xs uppercase tracking-[0.15em] text-navy transition-colors hover:text-brass"
-      >
-        <ArrowLeftIcon />
-        Go Back to My Fiverr Gig
-      </a>
-
-      <h1 className="mt-8 font-display text-4xl leading-[1.1] text-ink sm:text-5xl md:text-6xl">
-        WordPress Website Samples
-        <span className="mt-1 block font-display text-xl italic text-ink-muted sm:text-2xl">
-          (My Previous Works)
-        </span>
+      <h1 className="text-center font-bold font-display text-lg leading-[1.1] text-[#434445] sm:text-2xl md:text-3xl">
+        Some of My WordPress Work Samples
       </h1>
-
-      <a
-        href="https://www.fiverr.com/s/2KY0GG8"
-        className="group mt-8 inline-flex items-center gap-4"
-      >
-        <Image
-          src="/shihab-profile-picture-fiverr.jpg"
-          alt="Shihab — WordPress developer on Fiverr"
-          width={64}
-          height={64}
-          priority
-          className="h-16 w-16 rounded-full border-2 border-line object-cover transition-colors group-hover:border-navy"
-        />
-        <span className="font-label text-xs uppercase tracking-[0.15em] text-ink-muted transition-colors group-hover:text-navy">
-          Hire me on Fiverr
-          <ArrowUpRightIcon className="ml-1 inline h-3 w-3" />
-        </span>
-      </a>
 
       <ul className="mt-14 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-9 lg:grid-cols-3 lg:gap-10">
         {projects.map((project) => (
@@ -173,16 +136,6 @@ export default function Home() {
           </li>
         ))}
       </ul>
-
-      <footer className="mt-20 border-t border-line pt-8 text-center">
-        <a
-          href="https://www.fiverr.com/s/6YlEQZP"
-          className="font-label text-xs uppercase tracking-[0.15em] text-ink-muted transition-colors hover:text-navy"
-        >
-          Ready for your project? Visit my Fiverr gig
-          <ArrowUpRightIcon className="ml-1 inline h-3 w-3" />
-        </a>
-      </footer>
     </main>
   );
 }

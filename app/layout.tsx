@@ -1,33 +1,18 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
-
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "WordPress Projects by Shihabiiuc on Fiverr.",
+  title: "Some of My WordPress Work Samples",
   description:
-    "A curated collection of WordPress websites built by Shihabiiuc for clients across roofing, real estate, wellness, dental, property management, and more.",
+    "A curated collection of WordPress websites built by Shihabiiuc for clients across roofing, real estate, wellness, property management, and more.",
 };
 
 export default function RootLayout({
@@ -36,10 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}
-    >
+    <html lang="en" className={openSans.variable}>
       <body>{children}</body>
     </html>
   );

@@ -20,9 +20,9 @@
   --color-brass: var(--brass);
   --color-line: var(--line);
   --color-card: var(--card);
-  --font-display: var(--font-fraunces);
-  --font-body: var(--font-inter);
-  --font-label: var(--font-plex-mono);
+  --font-display: var(--font-open-sans);
+  --font-body: var(--font-open-sans);
+  --font-label: var(--font-open-sans);
 }
 
 * {
