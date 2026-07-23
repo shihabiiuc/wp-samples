@@ -18,6 +18,14 @@ const projects: Project[] = [
     icon: "roof",
   },
   {
+    name: "Transport Company",
+    category: "Logistic",
+    url: "https://kat-transport.fr/",
+    description:
+      "Transport company specializing in domestic and international transport. Based in France.",
+    icon: "logistic",
+  },
+  {
     name: "Your Thinking Mind",
     category: "Wellness Blog",
     url: "https://yourthinkingmind.com/",
@@ -191,6 +199,16 @@ const icons = {
       <path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9" />
     </svg>
   ),
+  logistic: (
+    <svg {...iconProps}>
+      <path d="M3 16V6a1 1 0 0 1 1-1h9v11" />
+      <path d="M13 10h4l4 3.5V16a1 1 0 0 1-1 1h-2" />
+      <path d="M3 16a2 2 0 1 0 4 0 2 2 0 1 0-4 0" />
+      <path d="M14 16a2 2 0 1 0 4 0 2 2 0 1 0-4 0" />
+      <path d="M7 16h5" />
+    </svg>
+  ),
+
   building: (
     <svg {...iconProps}>
       <rect x="6" y="3" width="12" height="18" rx="1" />
