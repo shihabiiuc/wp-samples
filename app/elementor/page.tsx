@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Some of My Elementor Work Samples",
+  description:
+    "A curated collection of WordPress sites built with Elementor by Shihabiiuc.",
+};
+
 type Project = {
   name: string;
   category: string;
@@ -14,14 +22,6 @@ const projects: Project[] = [
     description:
       "Lead-generation site for a Rhode Island roofing company, built to turn storm-damage searches into booked estimates.",
     icon: "roof",
-  },
-  {
-    name: "Transport Company",
-    category: "Logistic",
-    url: "https://kat-transport.fr/",
-    description:
-      "Transport company specializing in domestic and international transport. Based in France.",
-    icon: "logistic",
   },
   {
     name: "Your Thinking Mind",
@@ -48,22 +48,6 @@ const projects: Project[] = [
     icon: "heart",
   },
   {
-    name: "Patient Flow Solutions",
-    category: "Dental Marketing",
-    url: "https://patientflowsolutions.com/",
-    description:
-      "Marketing platform for a dental-industry agency, built to turn dental-practice leads into booked demo calls.",
-    icon: "tooth",
-  },
-  {
-    name: "My Property Master",
-    category: "Property Management",
-    url: "https://mypropertymaster.com/",
-    description:
-      "Property management company site with clear service breakdowns and an owner-inquiry form built to convert.",
-    icon: "key",
-  },
-  {
     name: "VI Media",
     category: "Marketing Agency",
     url: "https://vi-media.ca/",
@@ -74,7 +58,7 @@ const projects: Project[] = [
   {
     name: "360 Cap Group",
     category: "Financing",
-    url: "https://www.360capgroup.com/",
+    url: "https://360capgroup.com/",
     description:
       "Corporate site for a capital financing group, built to read as credible and trustworthy to loan applicants.",
     icon: "coins",
@@ -88,20 +72,28 @@ const projects: Project[] = [
     icon: "spray",
   },
   {
-    name: "Elwood Bathers",
-    category: "Seafood Restaurant",
-    url: "https://elwoodbathers.com/",
+    name: "Transport Company",
+    category: "Logistic",
+    url: "https://kat-transport.fr/",
     description:
-      "Seafood restaurant site built on a fully custom WordPress theme with hand-coded Gutenberg blocks.",
-    icon: "fish",
+      "Transport company specializing in domestic and international transport. Based in France.",
+    icon: "logistic",
+  },
+  {
+    name: "Sham Tech",
+    category: "Technology",
+    url: "https://sham-tech.com/",
+    description:
+      "Technology company site built to present services and capabilities to prospective clients.",
+    icon: "laptop",
   },
 ];
 
-export default function Home() {
+export default function Elementor() {
   return (
     <main className="mx-auto max-w-6xl px-6 pt-6 pb-14 md:px-10 md:pt-10 md:pb-20">
       <h1 className="mt-2 text-center font-bold font-display text-lg leading-[1.1] text-[#434445] sm:text-2xl md:text-3xl">
-        WordPress Project Links
+        Elementor Project Links
       </h1>
 
       <ul className="mt-14 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-9 lg:grid-cols-3 lg:gap-10">
@@ -189,13 +181,6 @@ const icons = {
       <path d="M7 16h5" />
     </svg>
   ),
-
-  building: (
-    <svg {...iconProps}>
-      <rect x="6" y="3" width="12" height="18" rx="1" />
-      <path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1" />
-    </svg>
-  ),
   leaf: (
     <svg {...iconProps}>
       <path d="M5 21c9 0 14-5 14-14 0-1-.1-2-.3-3C10 4 5 9 5 18c0 1 0 2 .2 3z" />
@@ -212,17 +197,6 @@ const icons = {
   heart: (
     <svg {...iconProps}>
       <path d="M12 20s-7-4.5-9-8.6C1.4 8 3 5 6.3 5 8.4 5 10.6 6.4 12 8.5 13.4 6.4 15.6 5 17.7 5 21 5 22.6 8 21 11.4 19 15.5 12 20 12 20z" />
-    </svg>
-  ),
-  tooth: (
-    <svg {...iconProps}>
-      <path d="M8 3c1 0 1.6.9 2 .9S10.9 3 12 3s3 .8 3.4 2.4c.5 1.9-.1 3.3-.6 5.2-.4 1.6-.4 3.3-.6 5-.2 1.5-.6 2.4-1.3 2.4-.9 0-1-1.3-1.2-2.9-.1-1-.2-2-.7-2-.5 0-.6 1-.7 2C10.1 17.7 10 19 9.1 19c-.7 0-1.1-.9-1.3-2.4-.2-1.7-.2-3.4-.6-5-.5-1.9-1.1-3.3-.6-5.2C7 3.8 7.4 3 8 3z" />
-    </svg>
-  ),
-  key: (
-    <svg {...iconProps}>
-      <circle cx="8" cy="15" r="4.2" />
-      <path d="M11 12.2 20 3.2M15.5 6.7l2.3 2.3M13 9.2l2 2" />
     </svg>
   ),
   megaphone: (
@@ -245,11 +219,11 @@ const icons = {
       <path d="M3.5 5.5 5 6.7M3.5 9.5 5 10M3 13.5h2" />
     </svg>
   ),
-  fish: (
+  laptop: (
     <svg {...iconProps}>
-      <path d="M3 12c3-4 8-6 13-4 2 .8 3.6 2.3 4.2 4-.6 1.7-2.2 3.2-4.2 4-5 2-10 0-13-4z" />
-      <path d="M20.2 12 22 9.6V14.4z" />
-      <circle cx="7.3" cy="11" r="0.8" fill="currentColor" stroke="none" />
+      <rect x="4" y="5" width="16" height="10" rx="1" />
+      <path d="M2 19h20" />
+      <path d="M9 15v2M15 15v2" />
     </svg>
   ),
 };
