@@ -38,6 +38,12 @@ const frameworks: Framework[] = [
           "Multilingual personal site built with Astro, with an English locale route.",
       },
       {
+        name: "HackedWP",
+        url: "https://hackedwp.com",
+        description:
+          "WordPress security resource site built with Astro.",
+      },
+      {
         name: "Carol Silbergeld",
         url: "https://carolsilbergeld.vercel.app",
         description:
@@ -79,6 +85,19 @@ const frameworks: Framework[] = [
         url: "https://shihabiiuc.github.io/jekyll",
         description:
           "Static site built with Jekyll and hosted directly on GitHub Pages.",
+      },
+    ],
+  },
+  {
+    name: "Gatsby",
+    tagline: "React-based static site generator with a rich GraphQL data layer.",
+    icon: "gatsby",
+    projects: [
+      {
+        name: "Bright Smile Dentale",
+        url: "https://brightsmiledentale.netlify.app/",
+        description:
+          "Dental practice website built with Gatsby and deployed on Netlify.",
       },
     ],
   },
@@ -215,6 +234,14 @@ const frameworkIcons = {
     <svg {...frameworkIconProps}>
       <circle cx="12" cy="12" r="3.2" />
       <path d="M12 3.5v2.2M12 18.3v2.2M20.5 12h-2.2M5.7 12H3.5M17.8 6.2l-1.6 1.6M7.8 16.2l-1.6 1.6M17.8 17.8l-1.6-1.6M7.8 7.8 6.2 6.2" />
+    </svg>
+  ),
+  gatsby: (
+    <svg {...frameworkIconProps}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 3v3.2" />
+      <path d="M12 20.5c-4.7-.4-8.5-4.2-8.9-8.9L12 20.5z" />
+      <circle cx="18" cy="18" r="1.4" />
     </svg>
   ),
 };

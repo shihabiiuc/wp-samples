@@ -87,6 +87,22 @@ const projects: Project[] = [
       "Technology company site built to present services and capabilities to prospective clients.",
     icon: "laptop",
   },
+  {
+    name: "Construction Contractor",
+    category: "Construction & Infrastructure",
+    url: "https://aqua-lark-908124.hostingersite.com/",
+    description:
+      "Credentials hub for a government and infrastructure contractor, built to showcase decades of project experience to institutional clients.",
+    icon: "building",
+  },
+  {
+    name: "Apparel Sourcing Company",
+    category: "Fashion & Textile Manufacturing",
+    url: "https://linen-chinchilla-158306.hostingersite.com/",
+    description:
+      "B2B site for a Bangladesh-based apparel buying house, built to present sourcing, factory vetting, and production services to global fashion brands.",
+    icon: "shirt",
+  },
 ];
 
 export default function Elementor() {
@@ -224,6 +240,19 @@ const icons = {
       <rect x="4" y="5" width="16" height="10" rx="1" />
       <path d="M2 19h20" />
       <path d="M9 15v2M15 15v2" />
+    </svg>
+  ),
+  building: (
+    <svg {...iconProps}>
+      <rect x="5" y="3" width="10" height="18" rx="1" />
+      <path d="M9 21v-4h2v4" />
+      <path d="M8 7h1M11 7h1M8 10h1M11 10h1M8 13h1M11 13h1" />
+      <path d="M15 11h4v10h-4" />
+    </svg>
+  ),
+  shirt: (
+    <svg {...iconProps}>
+      <path d="M8 4 4 7l2 3 2-1.3V20h8V8.7L18 10l2-3-4-3-2 2h-4z" />
     </svg>
   ),
 };

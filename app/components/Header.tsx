@@ -25,7 +25,9 @@ export default function Header() {
               href={item.href}
               aria-current={isActive ? "page" : undefined}
               className={`font-label text-xs uppercase tracking-[0.1em] transition-colors ${
-                isActive ? "text-navy" : "text-navy-soft hover:text-navy"
+                isActive
+                  ? "font-bold text-navy"
+                  : "text-navy-soft hover:text-navy"
               }`}
             >
               {item.label}
