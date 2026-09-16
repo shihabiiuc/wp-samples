@@ -48,14 +48,6 @@ const projects: Project[] = [
     icon: "heart",
   },
   {
-    name: "Patient Flow Solutions",
-    category: "Dental Marketing",
-    url: "https://patientflowsolutions.com/",
-    description:
-      "Marketing platform for a dental-industry agency, built to turn dental-practice leads into booked demo calls.",
-    icon: "tooth",
-  },
-  {
     name: "My Property Master",
     category: "Property Management",
     url: "https://mypropertymaster.com/",
