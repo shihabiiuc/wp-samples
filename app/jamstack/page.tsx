@@ -19,6 +19,7 @@ type Framework = {
   projects: Project[];
 };
 
+
 const frameworks: Framework[] = [
   {
     name: "Astro",
@@ -98,6 +99,19 @@ const frameworks: Framework[] = [
         url: "https://brightsmiledentale.netlify.app/",
         description:
           "Dental practice website built with Gatsby and deployed on Netlify.",
+      },
+    ],
+  },
+  {
+    name: "Hugo",
+    tagline: "Go-based static site generator built for speed.",
+    icon: "hugo",
+    projects: [
+      {
+        name: "Daniel Carter",
+        url: "https://danielcarter.website/",
+        description:
+          "Personal portfolio site built with Hugo.",
       },
     ],
   },
@@ -242,6 +256,12 @@ const frameworkIcons = {
       <path d="M12 3v3.2" />
       <path d="M12 20.5c-4.7-.4-8.5-4.2-8.9-8.9L12 20.5z" />
       <circle cx="18" cy="18" r="1.4" />
+    </svg>
+  ),
+  hugo: (
+    <svg {...frameworkIconProps}>
+      <path d="M5 20V4l7 7 7-7v16" />
+      <path d="M5 20h4M15 20h4" />
     </svg>
   ),
 };
